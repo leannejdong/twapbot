@@ -8,3 +8,5 @@ conan_basic_setup()
 add_executable(
         twapbot
         main.cpp)
+
+target_link_libraries(twapbot ${CONAN_LIBS})
