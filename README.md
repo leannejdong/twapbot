@@ -27,7 +27,7 @@ In order to build the test suite add `-DBUILD_TESTING` definition.
 
 ## Conan
 
-Add our remote https://conan.bitwyre.id/artifactory/api/conan/bitwyre to your list of remotes
+Add bitwyre remote https://conan.bitwyre.id/artifactory/api/conan/bitwyre to your list of remotes
 
 ```
 conan remote add bitwyre https://conan.bitwyre.id/artifactory/api/conan/bitwyre
