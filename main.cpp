@@ -28,5 +28,5 @@ auto main() -> int {
     auto func = [](const TimeResponse& res){ std::cout << res.unixtime.count() << "\n"; };
     Bitwyre::Rest::Public::Time::getAsync(func);
 }
-// Continue on...sync, async bots based on twap strategy
+// Continue on...sync, async bots via twap strategy
 
