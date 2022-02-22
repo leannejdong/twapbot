@@ -6,11 +6,11 @@ using namespace Bitwyre::Rest;
 auto main() -> int {
     auto r = Bitwyre::Rest::Public::Market::get();
     std::cout << "getting market size\n";
-    std::cout << r.markets.size() << "\n";
+//   //  std::cout << r.markets.size() << "\n";
 
-    for(const auto& m : r.markets) {
-        std::cout << m << "\n";
-    }
+    // for(const auto& m : r.markets) {
+    //     std::cout << m << "\n";
+    // }
     TickerRequest tickReq{InstrumentT{"btc_usd_spot"}};
     std::cout << "getting ticker size\n";
     TickerResponse ticker_r = Bitwyre::Rest::Public::Ticker::get(tickReq);
