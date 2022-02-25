@@ -2,10 +2,18 @@
 #include "bitwyresdk/rest/public/Market.hpp"
 #include "bitwyresdk/rest/public/Time.hpp"
 #include "bitwyresdk/rest/public/Ticker.hpp"
+#include "bitwyresdk/rest/private/OpenOrders.hpp"
 using namespace Bitwyre::Rest;
 auto main() -> int {
-    auto r = Bitwyre::Rest::Public::Market::get();
-    std::cout << "getting market size\n";
+    // auto r = Bitwyre::Rest::Public::Market::get();
+    // std::cout << "getting market size\n";
+    try{
+        auto r = Bitwyre::Rest::Private::OpenOrders();
+        std::cout << "readings...\n";
+    } catch(const std::exception&e)
+    {
+        std::cout << "checking OpenOrders received from API is ok...\n" << e.what() << "\n";
+    }
 //   //  std::cout << r.markets.size() << "\n";
 
     // for(const auto& m : r.markets) {
